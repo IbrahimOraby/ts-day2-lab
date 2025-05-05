@@ -1,6 +1,7 @@
 import BankAccount from "./BankAccount.js";
 import genReverseArr from "./GenReverse.js";
 import { User, Admin } from "./UserClass.js";
+import PostService from "./PostService.js";
 
 const bankAcc = new BankAccount(2500);
 bankAcc.deposit(2500);
@@ -14,3 +15,6 @@ const user1 = new User(1125, "Mazen", 25);
 const admin1 = new Admin('Manager', 1435, 'Ahmed',32)
 console.log(user1.getDetails());
 console.log(admin1.getDetails());
+
+const posts = new PostService();
+posts.fetchPosts("https://jsonplaceholder.typicode.com/posts");
